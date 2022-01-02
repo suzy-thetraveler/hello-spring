@@ -1,8 +1,10 @@
 package com.konai.hellospring.repository;
 
 import com.konai.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
+
 
 public class MemoryMemberRepository implements MemberRepository{
 
