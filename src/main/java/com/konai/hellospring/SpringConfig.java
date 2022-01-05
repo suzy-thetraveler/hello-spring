@@ -1,6 +1,7 @@
 package com.konai.hellospring;
 
 import com.konai.hellospring.repository.JdbcMemberRepository;
+import com.konai.hellospring.repository.JdbcTemplateMemberRepository;
 import com.konai.hellospring.repository.MemberRepository;
 import com.konai.hellospring.repository.MemoryMemberRepository;
 import com.konai.hellospring.service.MemberService;
@@ -27,7 +28,7 @@ public class SpringConfig {
     public MemberRepository memberRepository(){
 
         //return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 
 }

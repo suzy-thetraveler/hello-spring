@@ -25,6 +25,7 @@ public class JdbcMemberRepository implements MemberRepository{
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
+
         try {
             conn = getConnection();
             pstmt = conn.prepareStatement(sql,
@@ -43,6 +44,7 @@ public class JdbcMemberRepository implements MemberRepository{
         } finally {
             close(conn, pstmt, rs);
         }
+
     }
 
     @Override
