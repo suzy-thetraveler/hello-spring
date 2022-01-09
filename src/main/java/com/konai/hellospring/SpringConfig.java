@@ -1,5 +1,6 @@
 package com.konai.hellospring;
 
+import com.konai.hellospring.aop.TimeTraceAop;
 import com.konai.hellospring.repository.*;
 import com.konai.hellospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,7 @@ public class SpringConfig {
     public MemberService memberService(){
         return new MemberService(memberRepository);
     }
+
 
 //    @Bean
 //    public MemberRepository memberRepository(){
